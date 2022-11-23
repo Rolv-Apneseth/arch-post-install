@@ -13,7 +13,7 @@ install()
 }
 install_aur()
 {
-    "$AUR_HELPER" -S --noconfirm --needed "$@"
+    yes | "$AUR_HELPER" -S --noconfirm --needed "$@"
 }
 
 # Install pacman packages
