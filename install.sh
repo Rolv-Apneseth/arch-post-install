@@ -20,6 +20,8 @@ install_aur()
 PKGS=(
     'gnome-keyring'
     'gcc'
+    'git'
+    'base-devel'
     'stow'
     'curl'
     'moreutils'
