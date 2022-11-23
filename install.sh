@@ -43,6 +43,7 @@ PKGS=(
     'lightdm'
     'lightdm-webkit2-greeter'
     'lightdm-webkit-theme-litarvan'
+    'lightdm-gtk-greeter' # Backup
     'variety'
     'starship'
     'neofetch'
