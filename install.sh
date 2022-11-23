@@ -87,7 +87,7 @@ for service in "${SERVICES[@]}"; do
 done
 
 # Install AUR helper
-if ! command -v "$AUR_HELPER"; then
+if ! command -v "$AUR_HELPER" &> /dev/null; then
     git clone https://aur.archlinux.org/"$AUR_HELPER".git
     pushd "$AUR_HELPER" && makepkg -si && popd || exit
     rm -rf "$AUR_HELPER"
@@ -102,6 +102,10 @@ AUR_PKGS=(
     'juno-theme-git'
     'bibata-cursor-theme-bin'
     'qt5-styleplugins'
+    'apple-fonts'
+    'nerd-fonts-meslo'
+    'nerd-fonts-inconsolata'
+    'nerd-fonts-inconsolatalgc'
 )
 for pkg in "${AUR_PKGS[@]}"; do
     install_aur "$pkg"
