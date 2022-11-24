@@ -92,6 +92,7 @@ if ! command -v "$AUR_HELPER" &> /dev/null; then
     git clone https://aur.archlinux.org/"$AUR_HELPER".git
     pushd "$AUR_HELPER" && makepkg -si && popd || exit
     rm -rf "$AUR_HELPER"
+    yes | "$AUR_HELPER" -Syu
 fi
 
 # Install AUR packages
